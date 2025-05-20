@@ -144,6 +144,10 @@ document.getElementById('proceed-to-carousel').addEventListener('click', () => {
     resultScreen.style.display = 'none';
     resultScreen.classList.remove('fade-in');
     carousel.style.display = 'block';
+    // Reset carousel to the first item
+    progress = 0;
+    active = 0;
+    animate();
     setTimeout(() => {
         carousel.classList.add('fade-in');
     }, 10);
