@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Askout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="welcome-screen" class="screen welcome-screen">
+    <h1>HOGWARTS-Д</h1>
+    <h3>тавтай морил</h3>
+    <p>Hogwarts-д нийт Gryffindor, Ravenclaw, Hufflepuff, Slytherin <br> зэрэг 4 House байдаг ба өнөөдөр Э.Эмүжин чиний аль <br>House-д элсэхийг шийдэх болно.</p>
+    <button id="continue-button">Элсэх ёслолд оролцох</button>
+</div>
+
+<div id="hat-screen" class="screen hat-screen" style="display: none;">
+    <h2>Энэхүү шидэт малгайн дээр дарж<br> өөрийн House-аа олно уу</h2>
+    <img src="sorting_hat.png" id="sorting-hat" alt="Sorting Hat">
+</div>
+
+<div id="loading-screen" class="screen loading-screen" style="display: none;">
+    <div class="loading-text"></div>
+</div>
+
+<div id="result-screen" class="screen result-screen" style="display: none;">
+    <h2>Баяр хүргэе!</h2>
+    <p>Чиний элсэх House бол: <span id="house-name"></span></p>
+    <img src="gry.png" id="gry_logo" alt="gry_logo">
+    <button id="proceed-to-carousel">ЯАГААД ГЭДГИЙГ НЬ ХАМТДАА ХАРЦГААЯ!</button>
+</div>
+
+<div class="carousel screen" style="display: none;">
+    <div class="carousel-item">
+        <div class="carousel-box">
+            <div class="title">Учир нь чи⭐</div>
+            <div class="num">01</div>
+            <img src="https://scontent.fuln1-1.fna.fbcdn.net/v/t39.30808-6/487787671_674722558468352_5534933119391955019_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=102&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=rUxag0Ajc98Q7kNvwHsOxeL&_nc_oc=AdmEeunJlttYoE4Bpx2xUN8rAh1d7cPfxqS7eaDfEIYuJIAvqqIjV1xlnsS9mfX-Dc1g0Vk7icYz-MLrW-2KntRE&_nc_zt=23&_nc_ht=scontent.fuln1-1.fna&_nc_gid=IM5DDNet7Rq5pGGGldUTmg&oh=00_AfKx2pO3HaVs04IA6nrb5GWrazqGRl02aH-1aB1z47l-Eg&oe=682D3CF4" alt="Emujin_thumb">
+        </div>
+    </div>
+
+    <div class="carousel-item">
+        <div class="carousel-box">
+            <div class="title">Хэтэрхий cute😊</div>
+            <div class="num">02</div>
+            <img src="https://scontent.fuln1-1.fna.fbcdn.net/v/t39.30808-6/486580850_669811995626075_5293368010309159822_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=102&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=y6pJbZVT0HoQ7kNvwGJeMIg&_nc_oc=AdlvPeL9dW7jtxojxaJwambJzCLRCz1VrpbnahNkxfX-sFaxjBZ3FuH1n4wKH41Ubp5cPVYSgAaM--DSaG6sd_cZ&_nc_zt=23&_nc_ht=scontent.fuln1-1.fna&_nc_gid=l8bduVMH9DXBXkkyRsOdOw&oh=00_AfJY0aA3_fLATUln9JP8Px2a3TYnNRo9Dxn15yXfgI-lYA&oe=682D6ACE" alt="Hi_gif">
+        </div>
+    </div>
+
+    <div class="carousel-item">
+        <div class="carousel-box">
+            <div class="title">Хацрийг нь чимхээл баймаар🥺</div>
+            <div class="num">03</div>
+            <img src="https://github.com/tumee126a/htmlpics/blob/main/FB_IMG_1746730863546.jpg?raw=true" alt="Emujin_young">
+        </div>
+    </div>
+
+    <div class="carousel-item">
+        <div class="carousel-box">
+            <div class="title">Бас аййййййймар царайлаг✨</div>
+            <div class="num">04</div>
+            <img src="https://github.com/tumee126a/htmlpics/blob/main/Screenshot%202025-05-17%20024415.png?raw=true" alt="Hi_gif">
+        </div>
+    </div>
+
+    <div class="carousel-item">
+        <div class="carousel-box">
+            <div class="title">Энэ эдр яая гээд байгаамбээ 💖🩺💯</div>
+            <div class="num">05</div>
+            <img src="https://github.com/tumee126a/htmlpics/blob/main/image.png?raw=true" alt="Hi_gif">
+        </div>
+    </div>
+
+    <div class="carousel-item">
+        <div class="carousel-box">
+            <div class="title">Тэгснээ бүр нийгэмдээ санаа тавьдаг🔥</div>
+            <div class="num">06</div>
+            <img src="https://scontent.fuln1-1.fna.fbcdn.net/v/t1.15752-9/494821914_667736909431061_4144318045818129267_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=P1mrlpOeO-oQ7kNvwELF2j6&_nc_oc=AdlAw0q0RIhcDLlHWr04mj7cgZWjnHP7syijUX95tz9yYYUeBSFRG1RVvUMocizfNOBk6yWrscThaIZ9lpxlCrg9&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fuln1-1.fna&oh=03_Q7cD2QEryYALu3MFWiJRpE5oGD5YyWBQSlWIinDM5gkka0BwBQ&oe=6852F08B" alt="emujin_jagsaal">
+        </div>
+    </div>
+
+    <div class="carousel-item">
+        <div class="carousel-box">
+            <div class="title">Хамгийн хамгийн нь хэдий ямар нэгэн саадтай тулгарах үедээ ядарч байсан ч</div>
+            <div class="num">07</div>
+            <img src="https://www.hcf.com.au/content/dam/hcf/images/health-agenda/physical-health/1183395880_Always_tired_HUB_ARTICLE_v2_580x330_0622.jpg" alt="Hi_gif">
+        </div>
+    </div>
+
+    <div class="carousel-item">
+        <div class="carousel-box">
+            <div class="title">Тууштай, хөдөлмөрч байдлаараа эцсийг нь үздэг чинь үнэхээр...</div>
+            <div class="num">08</div>
+            <img src="https://scontent.fuln1-1.fna.fbcdn.net/v/t1.15752-9/494690430_668519512767631_4344936182457582395_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_ohc=qZ50EcyPvzIQ7kNvwEBxiE4&_nc_oc=Adk1OpahjYsmxdRCggpFa-3pfUbd0oBdySvTQ0JKkQcmZI1CIIJypSJaufXlZigE9K9hiQLkJbmF5E34EwYKH0_M&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fuln1-1.fna&oh=03_Q7cD2QGtQ0xzbwLLfKSHik3M-Lk3FNK8bDjQmkjJOX-3WGMAtA&oe=6852E9C1" alt="Hi_gif">
+        </div>
+    </div>
+
+    <div class="carousel-item">
+        <div class="carousel-box">
+            <div class="title">Түмээ болон Gryffindor-ийнхонд бүр үнэхээр их таалагддаг болохоор💗</div>
+            <div class="num">09</div>
+            <img src="https://media.tenor.com/wbqDH6hm_gcAAAAm/peach-goma-peach-and-goma.webp" alt="Hi_gif">
+        </div>
+    </div>
+</div>
+
+<div class="cursor"></div>
+<div class="cursor cursor2"></div>
+<script src="script.js"></script>
+</body>
+</html>
